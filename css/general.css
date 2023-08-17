@@ -67,7 +67,8 @@ Medium: 11px
     box-shadow: 0 0 0 0.8rem rgba(207,113,31, 0.5);
 }
 html{
-    font-size: 62.5%;
+    font-size: 62.5%;  /* 16px = 100% => 10px = 62.5% */
+    overflow-x: hidden;
 }
 
 body{
@@ -75,13 +76,16 @@ body{
     line-height: 1;
     color: #555;
     font-weight: 400;
+
+/*  Only works if there is nothing absolutely positioned int relation to body  */
+    overflow-x: hidden;
 }
 
 /********************************/
 /* GENERAL COMPONENTS */
 /********************************/
 
-.heading-primary, .heading-secondary{
+.heading-primary, .heading-secondary, .heading-tertiary{
     font-weight: 700;
     color: #333;
     letter-spacing: -0.5px;
@@ -98,9 +102,7 @@ body{
 }
 .heading-tertiary{
     font-size: 2.8rem;
-    font-weight: 1.2;
     margin-bottom: 3.2rem;
-    color: #333333;
 }
 .sub-heading{
     display: block;
@@ -175,8 +177,9 @@ body{
 .list-item{
     display: flex;
     align-items: center;
-    gap: 2.4rem;
+    gap: 1.6rem;
     margin-bottom: 1.8rem;
+    line-height: 1.2;
 }
 .list-item span{
     font-size: 2rem;
