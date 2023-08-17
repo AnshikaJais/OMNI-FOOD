@@ -69,6 +69,7 @@ Medium: 11px
 html{
     font-size: 62.5%;  /* 16px = 100% => 10px = 62.5% */
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -76,9 +77,9 @@ body{
     line-height: 1;
     color: #555;
     font-weight: 400;
-
 /*  Only works if there is nothing absolutely positioned int relation to body  */
     overflow-x: hidden;
+
 }
 
 /********************************/
